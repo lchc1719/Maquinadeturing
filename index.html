@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <title>Máquina De Turing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body style="background: #2b2b2b;">
+
+    <header class="masthead text-white text-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <h1 class="mb-5">Máquina de Turing</h1>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <div class="form-row align-items-center">
+                        <form class="form-inline"></form>
+                            <div class="col-auto">
+                                <input type="text" class="form-control form-control-lg" placeholder="Ingrese la Expresión"
+                                    id="texto" required pattern="[a-b]+">
+                            </div>
+                            <div class="col-auto">
+                                <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                                <div class="btn-group" role="group" aria-label="Funciones">
+                                    <button class="btn btn-block btn-lg bt-primary" type="button" id="ingresar"
+                                        data-toggle="popover" title="Error" data-content="La cadena está vacía."
+                                        data-placemente="right" data-trigger="focus">Ingresar</button>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="btn-group" role="group" aria-label="Funciones">
+                                    <button class="btne btn-primar config" type="button"
+                                        id="instrucciones"> <span> <i class="icon-help-with-circle icon-tam"></i> </span> </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="integrantes">
+                <h4>Integrantes</h4>
+                <h4>Ricardo Rangel Rincon - 2016114112</h4>
+                <h4>Luis Carlos Hatum Clavijo - 2016114065</h4>
+                <h4>Adrian Orlando Quiñonez Nier - 2017114092</h4>
+                <h4>Juan Luis Mancera Caro - 2016214071</h4>
+            </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center fondo">
+        <div class="container" id="maq-turing">
+            <svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <!--q2-->
+                <ellipse class="nodo" id="Q2" stroke="black" stroke-width="1" fill="none" cx="421.5" cy="198.5" rx="30"
+                    ry="30"></ellipse>
+                <text x="410.5" y="204.5" font-family="Times New Roman" font-size="20" id="q2">Q₂</text>
+                <!--q3-->
+                <ellipse class="nodo" id="Q3" stroke="black" stroke-width="1" fill="none" cx="421.5" cy="367.5" rx="30"
+                    ry="30"></ellipse>
+                <text x="410.5" y="373.5" font-family="Times New Roman" font-size="20" id="q3">Q₃</text>
+                <ellipse stroke="black" stroke-width="1" fill="none" cx="421.5" cy="367.5" rx="24" ry="24"></ellipse>
+                <!--q1-->
+                <ellipse class="nodo" id="Q1" stroke="black" stroke-width="1" fill="none" cx="168.5" cy="198.5" rx="30"
+                    ry="30" id="q1"></ellipse>
+                <text x="157.5" y="204.5" font-family="Times New Roman" font-size="20">Q₁</text>
+
+
+                <polygon stroke="black" stroke-width="1" points="81.5,198.5 138.5,198.5"></polygon>
+                <!--lineaq1aa-->
+                <polygon fill="black" stroke-width="1" points="138.5,198.5 130.5,193.5 130.5,203.5"></polygon>
+                <path stroke="black" stroke-width="1" fill="none"
+                    d="M 155.275,171.703 A 22.5,22.5 0 1 1 181.725,171.703"></path>
+                <text id="Q1aa" x="136.5" y="122.5" font-family="Times New Roman" font-size="20">a &gt; a,R</text>
+                <!--lineaq1ba-->
+                <polygon fill="black" stroke-width="1" points="181.725,171.703 190.473,168.17 182.382,162.292">
+                </polygon>
+                <path stroke="black" stroke-width="1" fill="none"
+                    d="M 181.725,225.297 A 22.5,22.5 0 1 1 155.275,225.297"></path>
+                <text id="Q1ba" x="135.5" y="287.5" font-family="Times New Roman" font-size="20">b &gt; a,R</text>
+                <!--lineaq2BB-->
+                <polygon fill="black" stroke-width="1" points="155.275,225.297 146.527,228.83 154.618,234.708">
+                </polygon>
+                <polygon stroke="black" stroke-width="1" points="198.5,198.5 391.5,198.5"></polygon>
+                <polygon fill="black" stroke-width="1" points="391.5,198.5 383.5,193.5 383.5,203.5"></polygon>
+                <text id="Q2BB" x="259.5" y="219.5" font-family="Times New Roman" font-size="20">B &gt; B,L</text>
+                <!--lineaq2aa-->
+                <path stroke="black" stroke-width="1" fill="none"
+                    d="M 413.787,169.63 A 22.5,22.5 0 1 1 439.724,174.817"></path>
+                <text id="Q2aa" x="423.5" y="120.5" font-family="Times New Roman" font-size="20">a &gt; a,L</text>
+                <polygon fill="black" stroke-width="1" points="439.724,174.817 448.994,173.068 442.214,165.718">
+                </polygon>
+                <!--lineaq3BB-->
+                <polygon stroke="black" stroke-width="1" points="421.5,228.5 421.5,337.5"></polygon>
+                <polygon fill="black" stroke-width="1" points="421.5,337.5 426.5,329.5 416.5,329.5"></polygon>
+                <text id="Q3BB" x="343.5" y="289.5" font-family="Times New Roman" font-size="20">B &gt; B,R</text>
+
+            </svg>
+        </div>
+
+        <div class="container fondos">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <p class="lead">Iteracion: <span id="contador">0</span> | Estado: <span id="estado">Q1</span></p>
+                    <div class="table-responsive-lg">
+                        <table id="tabla" class="table text-center table-responsive table-dark table-bordered">
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="slidecontainer">
+                        Velocidad:<br>
+                        <input type="range" min="0" max="1000" value="500" step="100" class="slider" id="rango">
+                        <p></p>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Funciones">
+                        <button class="btn btn-danger" id="verificar" content="1">Verificar Expresión</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Funciones">
+                        <button class="btn btn-warning" id="detener" content="1"
+                        onclick="detenerMaquina()">Detener</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+
+</html>
